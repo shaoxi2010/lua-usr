@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.10)
+project(lua)
+
+include_directories(
+    base
+    usr
+    )
+
+
+add_subdirectory(base)
+add_subdirectory(usr)
+
+add_executable(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} ${TARGET_OBJS})
